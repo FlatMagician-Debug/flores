@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flores Amarillas para ti</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #fffde7 0%, #fff9c4 100%);
+            font-family: 'Poppins', sans-serif;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.85);
+            padding: 40px 50px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(255, 213, 79, 0.4);
+            text-align: center;
+            z-index: 10;
+            backdrop-filter: blur(12px);
+            animation: fadeIn 2s ease-in-out, floatCard 4s ease-in-out infinite;
+            border: 2px solid #fff176;
+            max-width: 400px;
+        }
+
+        h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3.5rem;
+            color: #f57f17;
+            margin: 0 0 10px 0;
+            text-shadow: 2px 2px 8px rgba(253, 216, 53, 0.5);
+        }
+
+        p {
+            font-size: 1.15rem;
+            color: #5d4037;
+            margin-top: 10px;
+            line-height: 1.6;
+        }
+
+        .highlight {
+            font-weight: 600;
+            color: #f57f17;
+        }
+
+        /* Animación para las flores flotantes */
+        .flower {
+            position: absolute;
+            font-size: 2rem;
+            user-select: none;
+            animation: fall linear infinite;
+            z-index: 1;
+        }
+
+        @keyframes fall {
+            0% { transform: translateY(-10vh) rotate(0deg) scale(0.8); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(110vh) rotate(360deg) scale(1.2); opacity: 0; }
+        }
+
+        /* Animación para la tarjeta central */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes floatCard {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); }
+            100% { transform: translateY(0px); }
+        }
+
+        /* Tiempos y posiciones para cada flor */
+        .f1 { left: 10%; animation-duration: 8s; animation-delay: 0s; }
+        .f2 { left: 20%; animation-duration: 12s; animation-delay: 2s; font-size: 3rem; }
+        .f3 { left: 35%; animation-duration: 9s; animation-delay: 4s; }
+        .f4 { left: 50%; animation-duration: 14s; animation-delay: 1s; font-size: 2.5rem; }
+        .f5 { left: 65%; animation-duration: 10s; animation-delay: 5s; }
+        .f6 { left: 80%; animation-duration: 11s; animation-delay: 3s; font-size: 3.2rem; }
+        .f7 { left: 90%; animation-duration: 13s; animation-delay: 0.5s; }
+        .f8 { left: 25%; animation-duration: 15s; animation-delay: 6s; }
+        .f9 { left: 75%; animation-duration: 9s; animation-delay: 7s; font-size: 2rem; }
+    </style>
+</head>
+<body>
+
+    <div class="flower f1">🌻</div>
+    <div class="flower f2">🌼</div>
+    <div class="flower f3">🏵️</div>
+    <div class="flower f4">🌻</div>
+    <div class="flower f5">🌼</div>
+    <div class="flower f6">🏵️</div>
+    <div class="flower f7">🌻</div>
+    <div class="flower f8">🌼</div>
+    <div class="flower f9">🌻</div>
+
+    <div class="card">
+        <h1>Para ti...</h1>
+        <p>Alguien me dijo que hoy es el día de regalar flores amarillas, y <span class="highlight">la primera persona que se me vino a la mente fuiste tú</span>.</p>
+        <p>Que tengas un día tan bonito como tu sonrisa.</p>
+    </div>
+
+</body>
+</html>
